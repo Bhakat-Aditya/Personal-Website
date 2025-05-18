@@ -109,20 +109,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function downloadResume() {
     // Replace with the actual path to your resume PDF
-    const resumePath = 'resume.pdf';
-    
+    const resumePath = 'resume.png';
+
     // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = resumePath;
-    
+
     // Set the download attribute with a proper filename
-    link.download = 'resume.pdf';
-    
+    link.download = 'resume.png';
+
     // Append to the body, click it, and then remove it
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
+
     // Optional: Add a notification
     alert('Downloading resume...');
 }
