@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function downloadMarksheet(type) {
     // Replace these with the actual paths to your PDF files
     const pdfFiles = {
-        'class10': 'path/to/class10_marksheet.pdf',
-        'class12': 'path/to/class12_marksheet.pdf',
-        'college': 'path/to/college_marksheet.pdf'
+        'class10': 'class10_marksheet.jpg',
+        'class12': 'class12_marksheet.jpg',
+        'college': 'college_marksheet.jpg'
     };
 
     // Create a temporary anchor element
@@ -38,7 +38,7 @@ function downloadMarksheet(type) {
     link.href = pdfFiles[type];
 
     // Set the download attribute with a proper filename
-    link.download = `Aditya_${type}_marksheet.pdf`;
+    link.download = `Aditya_${type}_marksheet.jpg`;
 
     // Append to the body, click it, and then remove it
     document.body.appendChild(link);
