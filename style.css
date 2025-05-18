@@ -92,9 +92,56 @@ body {
     margin: 0 auto;
 }
 
+.home-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+}
+
+/* Rest of your existing home section styles remain the same */
 .homeinfo {
     font-size: 50px;
     flex: 1;
+}
+
+.homeimg {
+    display: flex;
+    justify-content: center;
+}
+
+.homeimg img {
+    width: 80%; /* Reduced from 100% */
+    max-width: 400px; /* Reduced from 500px */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Home Social Links */
+.home-social-links {
+    display: flex;
+    gap: 30px;
+}
+
+.home-social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.home-social-link:hover {
+    background: linear-gradient(135deg, #7f5af0 0%, #2cb67d 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .namel1,
@@ -486,7 +533,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    align-items: center; /* This will center the child elements horizontally */
+    align-items: center;
+    /* This will center the child elements horizontally */
 }
 
 .resume-preview {
@@ -496,7 +544,8 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 0 auto; /* This helps with centering */
+    margin: 0 auto;
+    /* This helps with centering */
 }
 
 .resume-image {
@@ -705,10 +754,10 @@ body {
     box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.2);
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label {
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:not(:placeholder-shown)+label {
     top: -10px;
     left: 10px;
     font-size: 0.8rem;
@@ -777,7 +826,7 @@ body {
     .contact-content {
         flex-direction: column;
     }
-    
+
     .contact-info,
     .contact-form {
         width: 100%;
@@ -785,16 +834,17 @@ body {
 }
 
 @media (max-width: 480px) {
+
     .contact-info,
     .contact-form {
         padding: 25px;
     }
-    
+
     .contact-info-item {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .form-group input,
     .form-group textarea {
         padding: 12px 15px;

@@ -180,3 +180,15 @@ document.addEventListener('DOMContentLoaded', () => {
         contactObserver.observe(item);
     });
 });
+
+// Add intersection observer for home section
+const homeSection = document.querySelector('.home');
+const homeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+        }
+    });
+}, { threshold: 0.1 });
+
+homeObserver.observe(homeSection);
