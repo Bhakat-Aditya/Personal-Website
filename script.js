@@ -116,7 +116,7 @@ function downloadResume() {
     link.href = resumePath;
     
     // Set the download attribute with a proper filename
-    link.download = 'Resume.pdf';
+    link.download = 'resume.pdf';
     
     // Append to the body, click it, and then remove it
     document.body.appendChild(link);
