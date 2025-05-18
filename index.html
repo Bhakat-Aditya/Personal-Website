@@ -199,12 +199,25 @@
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/Bhakat-Aditya" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/aditya-bhakat-anshu" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/aditya_bhakat69/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/aditya-bhakat-anshu" class="social-link"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/aditya_bhakat69/" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="https://x.com/ADITYABHAK4172" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+
+                <!-- Updated Form with FormSubmit Integration -->
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/bhakataditya0@gmail.com"
+                    method="POST">
+                    <!-- Hidden FormSubmit Fields -->
+                    <input type="hidden" name="_next" value="https://bhakat-aditya.github.io/your-repo/thanks.html">
+                    <input type="hidden" name="_subject" value="New Message from Portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <!-- Your Existing Form Fields -->
                     <div class="form-group">
                         <input type="text" id="name" name="name" required>
                         <label for="name">Your Name</label>
