@@ -108,21 +108,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function downloadResume() {
-    // Replace with the actual path to your resume PDF
-    const resumePath = 'resume.png';
-
-    // Create a temporary anchor element
+    const resumePath = 'resume.png'; // Correct PNG path
     const link = document.createElement('a');
     link.href = resumePath;
-
-    // Set the download attribute with a proper filename
-    link.download = 'resume.png';
-
-    // Append to the body, click it, and then remove it
+    link.download = 'Aditya_Bhakat_Resume.png'; // Better filename with your name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-
-    // Optional: Add a notification
-    alert('Downloading resume...');
+    
+    // Optional nicer notification
+    console.log('Resume download started');
 }
