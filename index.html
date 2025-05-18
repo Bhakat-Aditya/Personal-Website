@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="navname">Aditya's Portfolio</div>
+        <div class="navcont">
+            <div onclick="scrollToSection('home')">Home</div>
+            <div onclick="scrollToSection('intro')">Intro</div>
+            <div onclick="scrollToSection('projects')">Projects</div>
+            <div onclick="scrollToSection('resume')">Resume</div>
+            <div onclick="scrollToSection('contact')">Contact</div>
+        </div>
+    </div>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="homeinfo">
+                <div class="namel1">Hi I am <span style="color: purple; font-size: 75px">Aditya</span></div>
+                <div class="namel2">a Passionate</div>
+                <div class="namel3"><span id="element"></span></div>
+            </div>
+            <div class="homeimg">
+                <img src="https://eklib.com/wp-content/uploads/2021/10/Java.png" alt="Personal Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="qualifications-section">
+        <h2 class="section-title">My Qualifications</h2>
+        <div class="qualifications-container">
+            <!-- Class 10 -->
+            <!-- Updated qualification cards with download buttons -->
+            <div class="qualification-card">
+                <div class="card-content">
+                    <div class="qualification-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Class 10 (ICSE)</h3>
+                    <p class="institution">Vidyasagar Shishu Niketan</p>
+                    <p class="duration">2006 - 2020</p>
+                    <div class="qualification-details">
+                        <p><strong>Board:</strong> CISCE (Council for the Indian School Certificate Examinations)</p>
+                        <p><strong>Percentage:</strong> 85%</p>
+                    </div>
+                    <button class="download-btn" onclick="downloadMarksheet('class10')">
+                        <i class="fas fa-download"></i> Download Marksheet
+                    </button>
+                </div>
+            </div>
+
+            <div class="qualification-card">
+                <div class="card-content">
+                    <div class="qualification-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Class 12 (ISC)</h3>
+                    <p class="institution">Vidyasagar Shishu Niketan</p>
+                    <p class="duration">2020 - 2022</p>
+                    <div class="qualification-details">
+                        <p><strong>Board:</strong> Indian School Certificate (ISC)</p>
+                        <p><strong>Percentage:</strong> 79%</p>
+                    </div>
+                    <button class="download-btn" onclick="downloadMarksheet('class12')">
+                        <i class="fas fa-download"></i> Download Marksheet
+                    </button>
+                </div>
+            </div>
+
+            <div class="qualification-card">
+                <div class="card-content">
+                    <div class="qualification-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bachelor's Degree</h3>
+                    <p class="institution">Shree Agrasain College</p>
+                    <p class="duration">2022 - 2025</p>
+                    <div class="qualification-details">
+                        <p><strong>University:</strong> University of Calcutta</p>
+                        <p><strong>CGPA:</strong> 67% (till Semester 5)</p>
+                    </div>
+                    <button class="download-btn" onclick="downloadMarksheet('college')">
+                        <i class="fas fa-download"></i> Download Marksheet
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1: Twitter Clone -->
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <img src="twitter-preview.png" alt="Twitter Clone Preview" class="project-preview-img">
+                    <div class="project-overlay">
+                        <button class="view-demo-btn" data-src="https://bhakat-aditya.github.io/Twitter-Clone/">
+                            <i class="fas fa-play"></i> Live Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Twitter Clone</h3>
+                    <p>Clone of Twitter Desktop Made using Tailwind Css</p>
+                    <div class="project-links">
+                        <a href="https://github.com/bhakat-aditya/Twitter-Clone" target="_blank"><i
+                                class="fab fa-github"></i> Source Code</a>
+                        <a href="https://bhakat-aditya.github.io/Twitter-Clone/" target="_blank"><i
+                                class="fas fa-external-link-alt"></i> Full Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: UltraEdit Clone -->
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <img src="ultraedit-preview.png" alt="UltraEdit Clone Preview" class="project-preview-img">
+                    <div class="project-overlay">
+                        <button class="view-demo-btn" data-src="https://bhakat-aditya.github.io/Ultraedit-Clone/">
+                            <i class="fas fa-play"></i> Live Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>UltraEdit Clone</h3>
+                    <p>A clone of the Website of UltraEdit Download Page</p>
+                    <div class="project-links">
+                        <a href="https://github.com/bhakat-aditya/Ultraedit-Clone" target="_blank"><i
+                                class="fab fa-github"></i> Source Code</a>
+                        <a href="https://bhakat-aditya.github.io/Ultraedit-Clone/" target="_blank"><i
+                                class="fas fa-external-link-alt"></i> Full Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="demo-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="demo-iframe" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="resume" class="resume-section">
+        <h2 class="section-title">My Resume</h2>
+        <div class="resume-container">
+            <div class="resume-preview">
+                <img src="resume.png" alt="My Resume" class="resume-image">
+            </div>
+            <div class="resume-actions">
+                <button class="download-resume-btn" onclick="downloadResume()">
+                    <i class="fas fa-download"></i> Download Resume
+                </button>
+                <a href="resume.pdf" target="_blank" class="view-fullscreen-btn">
+                    <i class="fas fa-expand"></i> View Fullscreen
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer', 'Accountant', 'Video Editor', 'Content Creator', 'Tech Enthusiast', 'Photo Editor', 'Gamer'],
+            typeSpeed: 60,
+            backSpeed: 20,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
